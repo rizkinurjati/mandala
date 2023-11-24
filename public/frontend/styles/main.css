@@ -1,0 +1,64 @@
+body{
+    background-color: #fef7f7;
+}
+
+.navbar {
+    background-color: #ff4848;
+
+}
+
+.nav-link {
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #533535;
+}
+
+.dropdown-item {
+    color: #533535;
+}
+
+.dropdown-item:hover{
+    color: #ffffff;
+    background-color: #533535;
+}
+
+.comment-content{
+    background-color: #7d5959;
+}
+
+.footer {
+    background-color: #7d5959;
+    color: #ffffff;
+}
+
+h3.title{
+  color: #533535;
+  padding-bottom: 10px;
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-25%);
+}
+  
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+  
+}
+
