@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Magang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MagangController extends Controller
 {
@@ -24,7 +26,7 @@ class MagangController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +37,7 @@ class MagangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

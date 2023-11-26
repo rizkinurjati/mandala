@@ -23,7 +23,6 @@
             </div>
         </div>
         <div class="row text-center pt-4">
-            <div class="col">
                 <p style="font-size: 10px;color:#ad8989"> copyright 2023 - mandalacomputercianjur.com Allright Reserved</p>
             </div>
         </div>
