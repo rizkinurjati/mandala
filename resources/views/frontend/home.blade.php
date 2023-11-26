@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+
+<link rel="icon" href="{{ asset('frontend/images/logo mandala.png')}}"><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>Power - Bootstrap HTML5 Template</title>
+    <title>Mandala Computer Cianjur</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 
@@ -41,7 +42,7 @@ https://templatemo.com/tm-508-power
                                             <ul class="menu-first nav navbar-nav" style="margin-right: 20px;">
                                                 <li class="active"><a href="#">Home</a></li>
                                                 <li><a href="#about">About Us</a></li>
-                                                <li><a href="#portfolio">Our Works</a></li>
+                                                <li><a href="#portfolio">Share and</a></li>
                                                 <li><a href="#contact-us">Contact</a></li>                                 
                                             </ul>                                    
                                         </div> <!-- /.main-menu -->
@@ -225,7 +226,7 @@ https://templatemo.com/tm-508-power
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="right-image">
-                                                    <img src="img/right-side-image_1.jpg" alt="">
+                                                    <img src="{{ asset('frontend/images/BG1.png')}}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -250,7 +251,7 @@ https://templatemo.com/tm-508-power
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="right-image">
-                                                    <img src="{{ asset('frontnend/libraries/img/right-side-image_2.jpg')}}" alt="">
+                                                    <img src="{{ asset('frontend/images/coding.jpg')}}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -272,7 +273,7 @@ https://templatemo.com/tm-508-power
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="right-image">
-                                                    <img src="img/right-side-image_3.jpg" alt="">
+                                                    <img src="{{ asset('frontend/images/BG3.png')}}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -296,7 +297,7 @@ https://templatemo.com/tm-508-power
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="right-image">
-                                                    <img src="" alt="">
+                                                    <img src="{{ asset('frontend/images/BG2.png')}}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -318,7 +319,7 @@ https://templatemo.com/tm-508-power
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="right-image">
-                                                    <img src="img/right-side-image_5.jpg" alt="">
+                                                    <img src="{{ asset('frontend/images/BG6.jpg')}}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -337,65 +338,56 @@ https://templatemo.com/tm-508-power
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-heading">
-                            <h4>Gallery Portofolio</h4>
+                            <h4>Share & Comment</h4>
                             <p>
-                                Beberapa Gallery kegiatan di Mandala Computer 
+                                Sahring dan komentar dari client yang sudah memakai jasa kami
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div id="owl-portfolio" class="owl-carousel owl-theme imageGallery1">
-                        <div class="item">
-                            <div class="portfolio-item">
-                                <a href="{{ asset('frontend/images/BG1.png')}}" title=""><img src="{{ asset('frontend/images/BG1.png')}}" alt="Gallery image 1" /></a>
+                        @foreach ($data as $item)
+                        <div class="portfolio-item">
+                            <div class="card text-center text-white mx-2" style="border-color:#ad8989; background-color:transparent">
+                                @if ( $item->foto)
+                                <img class="rounded-circle  mx-auto py-2" src="{{ Storage::url($item->foto) }}" alt="" srcset="" width="100px" height="100px">
+                                @else
+                                <img class="rounded-circle  mx-auto py-2" src="{{ asset('frontend/images/5856.jpg') }}" alt="" srcset="" width="100px" height="100px">
+                                @endif
+                                <h6 class="h6-content pt-2" style="color: #ffffff"> {{ $item->nama_lengkap }} </h6>
+                                <p style="margin-top:-10px;font-size: 11px; color:#fffcfc;">{{ $item->pekerjaan }} - {{ $item->instansi }} </p>
+                                <p style="font-weight: bold; color:#FCFF7D">Terbaik <i class="fas fa-thumbs-up"></i> +{{$item->rate}} </p>
+                                <p style="font-size: 12px;color: #ffffff">
+                                    {{ $item->komentar }}
+                                </p>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="portfolio-item">
-                                <a href="{{ asset('frontend/images/BG2.png')}}" title=""><img src="{{ asset('frontend/images/BG2.png')}}" alt="Gallery image 1" /></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="portfolio-item">
-                                <a href="{{ asset('frontend/images/BG3.png')}}" title=""><img src="{{ asset('frontend/images/BG3.png')}}" alt="Gallery image 1" /></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="portfolio-item">
-                                <a href="{{ asset('frontend/images/BG4.jpg')}}" title=""><img src="{{ asset('frontend/images/BG4.jpg')}}" alt="Gallery image 1" height="213px"/></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="portfolio-item">
-                                <a href="{{ asset('frontend/images/bg5.jpg')}}" data-lightbox="image-1"><img src="{{ asset('frontend/images/bg5.jpg')}}" ></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="portfolio-item">
-                                <a href="{{ asset('frontend/images/BG6.jpg')}}" title=""><img src="{{ asset('frontend/images/BG6.jpg')}}" alt="Gallery image 1" height="213px"/></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="portfolio-item">
-                                <a href="{{ asset('frontend/images/BG7.jpg')}}" title=""><img src="{{ asset('frontend/images/BG7.jpg')}}" alt="Gallery image 1" height="213px"/></a>
-                            </div>
-                        </div>
+                        </div>                          
+                        @endforeach
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="comment" class="codmment-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="text-center">Testimoni & Komentar</h4>
-
-                    </div>
-                </div>
+{{-- 
+        @foreach ($data as $key => $item)
+        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+            <div class="col-xl-3 col-md-6 mb-4 py-4">
+            <div class="card text-center text-white mx-2" style="border-color:#ad8989; background-color:transparent">
+                @if ( $item->foto)
+                <img class="rounded-circle  mx-auto py-2" src="{{ Storage::url($item->foto) }}" alt="" srcset="" width="100px" height="100px">
+                @else
+                <img class="rounded-circle  mx-auto py-2" src="{{ asset('frontend/images/5856.jpg') }}" alt="" srcset="" width="100px" height="100px">
+                @endif
+                <h6 class="h6-content pt-2"> {{ $item->nama_lengkap }} </h6>
+                <p style="margin-top:-10px;font-size: 11px; color:#ddc5c5;">{{ $item->pekerjaan }} - {{ $item->instansi }} </p>
+                <p style="font-weight: bold; color:#FCFF7D">Terbaik <i class="fas fa-thumbs-up"></i> +{{$item->rate}} </p>
+                <p style="font-size: 12px;">
+                    {{ $item->komentar }}
+                </p>
             </div>
-        </section>
+            </div>
+        </div>
+        @endforeach --}}
 
         <section id="contact-us">
             <div class="container">
@@ -411,31 +403,45 @@ https://templatemo.com/tm-508-power
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <form id="contact" action="#" method="post">
+                        <form id="contact" action="{{ route('store.testimoni') }}" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
+                                    {{-- <span>Upload Foto :</span> --}}
+                                    <fieldset>
+                                        <input name="foto" type="file" class="form-control" id="subject" placeholder="Foto" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
                                   <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Name..." required="">
+                                    <input name="nama_lengkap" type="text" class="form-control" id="nama_lengkap" placeholder="Nama Lengkap..." required="">
                                   </fieldset>
                                 </div>
                                 <div class="col-md-6">
                                   <fieldset>
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email..." required="">
-                                  </fieldset>
-                                </div>
-                                 <div class="col-md-6">
-                                  <fieldset>
-                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                                    <input name="pekerjaan" type="text" class="form-control" id="pekerjaan" placeholder="Pekerjaan..." required="">
                                   </fieldset>
                                 </div>
                                 <div class="col-md-6">
                                   <fieldset>
-                                    <input name="phone" type="phone" class="form-control" id="phone" placeholder="Phone..." required="">
+                                    <input name="instansi" type="text" class="form-control" id="instansi" placeholder="Instansi..." required="">
                                   </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                    <span>Beri rating</span>
+                                      <select name="rate" type="text" class="form-control" id="rate" placeholder="Instansi..." required="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message..." required=""></textarea>
+                                    <textarea name="komentar" rows="6" class="form-control" id="komentar" placeholder="Komentar..." required=""></textarea>
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
@@ -514,6 +520,29 @@ https://templatemo.com/tm-508-power
         </script>
         
     
-    
+        @push('after-script')
+    <script>
+        // $('#recipeCarousel').carousel({
+        //     interval :2000
+        //     });
+
+        //     $('.carousel .carousel-item').each(function(){
+        //         var next = $(this).next();
+        //         if (!next.length) {
+        //         next = $(this).siblings(':first');
+        //         }
+        //         next.children(':first-child').clone().appendTo($(this));
+                
+        //         for (var i=0;i<2;i++) {
+        //             next=next.next();
+        //             if (!next.length) {
+        //             next = $(this).siblings(':first');
+        //             }
+                    
+        //             next.children(':first-child').clone().appendTo($(this));
+        //     }
+        // });
+    </script>
+    @endpush
     </body>
 </html>
